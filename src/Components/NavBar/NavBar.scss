@@ -1,0 +1,17 @@
+@import "../../CSSVariables/SassVariables.scss";
+
+.navbar-container {
+  background-color: $lightBlue;
+  color: $darkBlue;
+  font-size: 30px;
+  min-height: 60px;
+  position: absolute;
+  top: 0;
+  min-width: 100vw;
+
+  .fa-bars {
+    display: none;
+    left: 0.5em;
+    position: relative;
+  }
+}
