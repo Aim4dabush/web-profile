@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { red } from "../CSSVariables/JSVariables";
+import { green } from "../CSSVariables/JSVariables";
 
 const Hawaiian = styled.span`
   color: transparent;
@@ -9,7 +9,7 @@ const Hawaiian = styled.span`
 
   &::after {
     align-items: center;
-    color: ${red};
+    color: ${green};
     left: 10%;
     position: absolute;
     top: 0;
@@ -24,7 +24,7 @@ const Hawaiian = styled.span`
   }
 
   &::before {
-    color: ${red};
+    color: ${green};
     display: flex;
     justify-content: center;
     left: 0;

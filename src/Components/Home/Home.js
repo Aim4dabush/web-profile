@@ -1,7 +1,7 @@
 import React from "react";
 
 //styles
-import { HomeTitle } from "../../StyledComponents/CenterTitle";
+import { HomeTitle } from "../../StyledComponents/Title";
 import { Hello, MiddleName, ComeIn } from "../../StyledComponents/Hawaiian";
 import { HomeContainer } from "../../StyledComponents/Container";
 import { PageImg } from "../../StyledComponents/Img";
@@ -9,7 +9,7 @@ import { PageImg } from "../../StyledComponents/Img";
 function Home() {
   return (
     <HomeContainer>
-      <PageImg src={process.env.PUBLIC_URL + "/images/Aloha.png"} />
+      <PageImg alt="Aloha" src={process.env.PUBLIC_URL + "/images/Aloha.png"} />
       <HomeTitle>Home</HomeTitle>
       <div className="home-content">
         <p>

@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { darkBlue, lightBlue, red } from "../CSSVariables/JSVariables";
+import { darkBlue, green, lightBlue } from "../CSSVariables/JSVariables";
 
-const CenterTitle = styled.div`
+const Title = styled.div`
   align-items: center;
   background-color: ${darkBlue};
   border: 5px solid ${lightBlue};
@@ -20,7 +20,7 @@ const CenterTitle = styled.div`
   width: 90px;
 
   &::after {
-    color: ${red};
+    color: ${green};
     position: absolute;
     transform: translateX(10%) scale(0);
     transform-origin: right;
@@ -32,7 +32,7 @@ const CenterTitle = styled.div`
   }
 
   &::before {
-    color: ${red};
+    color: ${green};
     position: absolute;
     text-decoration: underline;
     transform: translateX(0) scale(1);
@@ -45,12 +45,22 @@ const CenterTitle = styled.div`
   }
 `;
 
-export const HomeTitle = styled(CenterTitle)`
+export const HomeTitle = styled(Title)`
+  &::after {
+    content: "Home";
+  }
+
   &::before {
     content: "Hale";
   }
+`;
 
+export const AboutTitle = styled(Title)`
   &::after {
-    content: "Home";
+    content: "About";
+  }
+
+  &::before {
+    content: "Pili Ana";
   }
 `;
