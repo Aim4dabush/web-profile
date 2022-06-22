@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { darkBlue, red } from "../CSSVariables/JSVariables";
+import { lightBlue, red } from "../CSSVariables/JSVariables";
 
 const Nav = styled.ul`
   display: flex;
@@ -11,7 +11,7 @@ const Nav = styled.ul`
 
   a {
     align-items: center;
-    color: ${darkBlue};
+    color: ${lightBlue};
     display: flex;
     height: 100%;
     justify-content: center;

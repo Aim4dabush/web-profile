@@ -6,14 +6,14 @@ import routes from "./Routes/Routes";
 
 //styles
 import "./App.scss";
-import { Container } from "./StyledComponents/Container";
+import { MainContainer } from "./StyledComponents/Container";
 
 function App() {
   return (
-    <Container>
+    <MainContainer>
       <NavBar />
       {routes}
-    </Container>
+    </MainContainer>
   );
 }
 
