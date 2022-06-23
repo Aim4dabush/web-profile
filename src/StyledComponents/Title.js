@@ -10,14 +10,14 @@ const Title = styled.div`
   cursor: pointer;
   display: flex;
   font-size: 25px;
-  height: 90px;
+  height: 100px;
   justify-content: center;
   left: 45%;
   position: relative;
   overflow: hidden;
   text-transform: uppercase;
   top: -50px;
-  width: 90px;
+  width: 100px;
 
   &::after {
     color: ${green};
@@ -45,6 +45,16 @@ const Title = styled.div`
   }
 `;
 
+export const AboutTitle = styled(Title)`
+  &::after {
+    content: "About";
+  }
+
+  &::before {
+    content: "Pili Ana";
+  }
+`;
+
 export const HomeTitle = styled(Title)`
   &::after {
     content: "Home";
@@ -55,12 +65,12 @@ export const HomeTitle = styled(Title)`
   }
 `;
 
-export const AboutTitle = styled(Title)`
+export const ResumeTitle = styled(Title)`
   &::after {
-    content: "About";
+    content: "Resume";
   }
 
   &::before {
-    content: "Pili Ana";
+    content: "Ho'omau";
   }
 `;

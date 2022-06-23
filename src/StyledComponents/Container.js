@@ -90,3 +90,16 @@ export const MainContainer = styled(Container)`
   position: relative;
   z-index: 1;
 `;
+
+export const ResumeContainer = styled(Container)`
+  height: fit-content;
+  position: relative;
+
+  .pdf {
+    height: 500px;
+    left: 10.5%;
+    position: relative;
+    top: 0;
+    width: 1500px;
+  }
+`;
