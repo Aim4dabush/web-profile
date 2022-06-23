@@ -71,6 +71,13 @@ export const AboutContainer = styled(Container)`
   }
 `;
 
+export const ContactContainer = styled(Container)`
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+`;
+
 export const HomeContainer = styled(Container)`
   .home-content {
     align-items: center;

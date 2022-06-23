@@ -55,6 +55,18 @@ export const AboutTitle = styled(Title)`
   }
 `;
 
+export const ContactTitle = styled(Title)`
+  left: 0;
+
+  &::after {
+    content: "Contact";
+  }
+
+  &::before {
+    content: "Pili";
+  }
+`;
+
 export const HomeTitle = styled(Title)`
   &::after {
     content: "Home";
