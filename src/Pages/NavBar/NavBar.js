@@ -1,8 +1,8 @@
 import React from "react";
 
 //components
-import PageNav from "./PageNav/PageNav";
-import SocialNav from "./SocialNav/SocialNav";
+import PageNav from "../../Components/NavBar/PageNav/PageNav";
+import SocialNav from "../../Components/NavBar/SocialNav/SocialNav";
 
 //fontawesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

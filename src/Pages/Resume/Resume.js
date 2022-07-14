@@ -1,7 +1,7 @@
 import React from "react";
-import Iframe from "react-iframe";
 
 //styles
+import Iframe from "react-iframe";
 import { PageImg } from "../../StyledComponents/Img";
 import { ResumeContainer } from "../../StyledComponents/Container";
 import { ResumeTitle } from "../../StyledComponents/Title";

@@ -2,12 +2,13 @@
 
 .navbar-container {
   background-color: $darkBlue;
+  box-sizing: border-box;
   color: $darkBlue;
   font-size: 30px;
   min-height: 60px;
   position: absolute;
   top: 0;
-  min-width: 100vw;
+  width: 100%;
   z-index: 1;
 
   .fa-bars {

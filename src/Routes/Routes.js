@@ -1,19 +1,26 @@
 import React from "react";
-import { Switch, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 
 //components
-import About from "../Components/About/About";
-import Contact from "../Components/Contact/Contact";
-import Home from "../Components/Home/Home";
-import Projects from "../Components/Projects/Projects";
-import Resume from "../Components/Resume/Resume";
+import About from "../Pages/About/About";
+import App from "../App";
+import Contact from "../Pages/Contact/Contact";
+import Home from "../Pages/Home/Home";
+import Projects from "../Pages/Projects/Projects";
+import ProjectDetails from "../Components/Projects/ProjectDetails/ProjectDetails";
+import Resume from "../Pages/Resume/Resume";
 
 export default (
-  <Switch>
-    <Route component={Home} exact path="/" />
-    <Route component={About} path="/about" />
-    <Route component={Projects} path="/projects" />
-    <Route component={Resume} path="/resume" />
-    <Route component={Contact} path="/contact" />
-  </Switch>
+  <Routes>
+    <Route path="/" element={<App />}>
+      <Route index element={<Navigate to="/web-profile" replace={true} />} />
+      <Route element={<Home />} path="web-profile" />
+      <Route element={<About />} path="about" />
+      <Route element={<Projects />} exact path="projects">
+        <Route element={<ProjectDetails />} path=":projectId" />
+      </Route>
+      <Route element={<Resume />} path="resume" />
+      <Route element={<Contact />} path="contact" />
+    </Route>
+  </Routes>
 );

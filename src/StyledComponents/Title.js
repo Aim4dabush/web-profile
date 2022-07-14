@@ -10,14 +10,14 @@ const Title = styled.div`
   cursor: pointer;
   display: flex;
   font-size: 25px;
-  height: 100px;
+  height: 140px;
   justify-content: center;
   left: 45%;
   position: relative;
   overflow: hidden;
   text-transform: uppercase;
-  top: -50px;
-  width: 100px;
+  top: -75px;
+  width: 140px;
 
   &::after {
     color: ${green};
@@ -74,6 +74,16 @@ export const HomeTitle = styled(Title)`
 
   &::before {
     content: "Hale";
+  }
+`;
+
+export const ProjectsTitle = styled(Title)`
+  &::after {
+    content: "Projects";
+  }
+
+  &::before {
+    content: "Na Papahana";
   }
 `;
 

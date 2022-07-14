@@ -1,18 +1,18 @@
 //components
-import NavBar from "./Components/NavBar/NavBar";
-
-//routes
-import routes from "./Routes/Routes";
+import NavBar from "./Pages/NavBar/NavBar";
 
 //styles
 import "./App.scss";
 import { MainContainer } from "./StyledComponents/Container";
 
+//react router
+import { Outlet } from "react-router-dom";
+
 function App() {
   return (
     <MainContainer>
       <NavBar />
-      {routes}
+      <Outlet />
     </MainContainer>
   );
 }

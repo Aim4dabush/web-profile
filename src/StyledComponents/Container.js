@@ -1,18 +1,17 @@
 import styled from "styled-components";
-import { darkBlue, lightBlue } from "../CSSVariables/JSVariables";
+import { darkBlue, lightBlue, red } from "../CSSVariables/JSVariables";
 
 const Container = styled.div`
   background-color: ${darkBlue};
   color: ${lightBlue};
   height: 100vh;
-  width: 100vw;
+  width: 100%;
 `;
 
 export const AboutContainer = styled(Container)`
   .about-content {
     display: flex;
     justify-content: space-evenly;
-    width: 100%;
 
     .about-me {
       padding: 1em;
@@ -78,6 +77,8 @@ export const ContactContainer = styled(Container)`
   height: fit-content;
 `;
 
+export const DetailsContentContainer = styled(Container)``;
+
 export const HomeContainer = styled(Container)`
   .home-content {
     align-items: center;
@@ -98,6 +99,33 @@ export const MainContainer = styled(Container)`
   z-index: 1;
 `;
 
+export const ProjectCarouselContainer = styled(Container)`
+  display: flex;
+  justify-content: space-evenly;
+  height: 100%;
+
+  .project-link {
+    color: ${lightBlue};
+    height: 100%;
+    text-decoration: none;
+    transition: color 300ms;
+  }
+
+  .project-link:hover {
+    color: ${red};
+  }
+`;
+
+export const ProjectsContainer = styled(Container)`
+  height: fit-content;
+`;
+
+export const ProjectIconContainer = styled(Container)`
+  display: flex;
+  height: fit-content;
+  justify-content: space-evenly;
+`;
+
 export const ResumeContainer = styled(Container)`
   height: fit-content;
   position: relative;
@@ -110,3 +138,5 @@ export const ResumeContainer = styled(Container)`
     width: 1500px;
   }
 `;
+
+export const SiteContainer = styled(Container)``;
