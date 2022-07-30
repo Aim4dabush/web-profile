@@ -13,7 +13,7 @@ import Resume from "../Pages/Resume/Resume";
 export default (
   <Routes>
     <Route path="/" element={<App />}>
-      <Route index element={<Navigate to="/web-profile" replace={true} />} />
+      <Route index element={<Home />} />
       <Route element={<Home />} path="web-profile" />
       <Route element={<About />} path="about" />
       <Route element={<Projects />} exact path="projects">

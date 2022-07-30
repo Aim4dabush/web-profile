@@ -20,6 +20,10 @@ const Nav = styled.ul`
     width: 100%;
   }
 
+  a:hover {
+    color: ${red};
+  }
+
   li {
     align-items: center;
     display: flex;

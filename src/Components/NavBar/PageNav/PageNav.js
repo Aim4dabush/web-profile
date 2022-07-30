@@ -15,36 +15,49 @@ import {
 import { Page } from "../../../StyledComponents/Nav";
 
 function PageNav() {
-  const activeStyle = ({ isActive }) => (isActive ? "current" : null);
-
   return (
     <Page>
       <li>
-        <NavLink className={activeStyle} to={"/"}>
+        <NavLink
+          className={({ isActive }) => (isActive ? "current" : undefined)}
+          to={"/"}
+        >
           <span className="icon-title">Home</span>
           <FontAwesomeIcon className="icon" icon={faHouse} />
         </NavLink>
       </li>
       <li>
-        <NavLink to={"/about"}>
+        <NavLink
+          className={({ isActive }) => (isActive ? "current" : undefined)}
+          to={"/about"}
+        >
           <span className="icon-title">About Me</span>
           <FontAwesomeIcon className="icon" icon={faSquareUser} />
         </NavLink>
       </li>
       <li>
-        <NavLink to={"/projects"}>
+        <NavLink
+          className={({ isActive }) => (isActive ? "current" : undefined)}
+          to={"/projects"}
+        >
           <span className="icon-title">Projects</span>
           <FontAwesomeIcon className="icon" icon={faDisplayCode} />
         </NavLink>
       </li>
       <li>
-        <NavLink to={"/resume"}>
+        <NavLink
+          className={({ isActive }) => (isActive ? "current" : undefined)}
+          to={"/resume"}
+        >
           <span className="icon-title">Resume</span>
           <FontAwesomeIcon className="icon" icon={faFilePdf} />
         </NavLink>
       </li>
       <li>
-        <NavLink to={"/contact"}>
+        <NavLink
+          className={({ isActive }) => (isActive ? "current" : undefined)}
+          to={"/contact"}
+        >
           <span className="icon-title">Contact</span>
           <FontAwesomeIcon className="icon" icon={faAddressCard} />
         </NavLink>

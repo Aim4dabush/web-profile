@@ -77,7 +77,29 @@ export const ContactContainer = styled(Container)`
   height: fit-content;
 `;
 
-export const DetailsContentContainer = styled(Container)``;
+export const DetailsContentContainer = styled(Container)`
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  width: 50%;
+
+  .details-title {
+    font-size: 35px;
+    text-decoration: underline;
+    margin-bottom: 16px;
+  }
+
+  .details-content {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+`;
+
+export const DetailsImageContainer = styled(Container)`
+  height: 450px;
+  width: 600px;
+`;
 
 export const HomeContainer = styled(Container)`
   .home-content {
@@ -101,29 +123,54 @@ export const MainContainer = styled(Container)`
 
 export const ProjectCarouselContainer = styled(Container)`
   display: flex;
-  justify-content: space-evenly;
-  height: 100%;
+  justify-content: center;
+  height: fit-content;
+  position: relative;
+  overflow: hidden;
 
-  .project-link {
-    color: ${lightBlue};
-    height: 100%;
-    text-decoration: none;
-    transition: color 300ms;
+  .left-arrow {
+    cursor: pointer;
+    font-size: 50px;
+    left: 2em;
+    position: absolute;
+    top: 40%;
   }
 
-  .project-link:hover {
+  .left-arrow:hover {
     color: ${red};
+  }
+
+  .right-arrow {
+    cursor: pointer;
+    font-size: 50px;
+    position: absolute;
+    right: 2em;
+    top: 40%;
+  }
+
+  .right-arrow:hover {
+    color: ${red};
+  }
+
+  .slide.active {
+    height: fit-content;
   }
 `;
 
 export const ProjectsContainer = styled(Container)`
-  height: fit-content;
+  height: 500px;
+
+  .carousel {
+    height: 100%;
+  }
 `;
 
 export const ProjectIconContainer = styled(Container)`
   display: flex;
+  font-size: 25px;
   height: fit-content;
   justify-content: space-evenly;
+  margin-bottom: 16px;
 `;
 
 export const ResumeContainer = styled(Container)`
@@ -139,4 +186,19 @@ export const ResumeContainer = styled(Container)`
   }
 `;
 
-export const SiteContainer = styled(Container)``;
+export const SiteContainer = styled(Container)`
+  font-size: 20px;
+  height: fit-content;
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 16px;
+
+  .details-responsive {
+    font-size: 20px;
+  }
+
+  a {
+    color: ${lightBlue};
+    text-decoration: none;
+  }
+`;

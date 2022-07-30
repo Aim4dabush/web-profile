@@ -15,10 +15,11 @@ import { faGlobe } from "@fortawesome/pro-regular-svg-icons";
 import { useParams, useNavigate } from "react-router-dom";
 
 //styles
-import { Button } from "../../../StyledComponents/Button";
+import { BackButton } from "../../../StyledComponents/Button";
 import { DetailsCard } from "../../../StyledComponents/Card";
 import {
   DetailsContentContainer,
+  DetailsImageContainer,
   ProjectIconContainer,
   SiteContainer,
 } from "../../../StyledComponents/Container";
@@ -43,21 +44,32 @@ function ProjectDetails() {
 
   return (
     <DetailsCard>
-      <img src={data?.image} alt={data?.title} />
+      <DetailsImageContainer>
+        <video
+          className="details-image"
+          style={{ height: "100%", width: "100%" }}
+          autoPlay
+          loop
+          muted
+        >
+          <source src={data?.gif} type="video/mp4" />
+        </video>
+      </DetailsImageContainer>
       <DetailsContentContainer>
-        <h3>{data?.title}</h3>
-        <p>{data?.description}</p>
+        <h3 className="details-title">{data?.title}</h3>
+        <p className="details-content">{data?.description}</p>
         <SiteContainer>
-          <div className="github">
-            <FontAwesomeIcon icon={faGithub} /> : {data?.github}
-          </div>
-          <div className="deploy-site">
-            <FontAwesomeIcon icon={faGlobe} /> : {data?.deploySite}
-          </div>
+          <p className="details-responsive">Responsive: {data?.responsive}</p>
+          <a href={data?.github} target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faGithub} /> Github
+          </a>
+          <a href={data?.deploySite} target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faGlobe} /> Deployed Site
+          </a>
         </SiteContainer>
-        <p>Responsive: {data?.responsive}</p>
+
         <ProjectIconContainer>{dataMap}</ProjectIconContainer>
-        <Button onClick={handleOnClick}>Back</Button>
+        <BackButton onClick={handleOnClick}>Back</BackButton>
       </DetailsContentContainer>
     </DetailsCard>
   );
