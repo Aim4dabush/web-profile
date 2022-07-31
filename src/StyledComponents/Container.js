@@ -170,7 +170,7 @@ export const ProjectIconContainer = styled(Container)`
   font-size: 25px;
   height: fit-content;
   justify-content: space-evenly;
-  margin-bottom: 16px;
+  margin: 16px 0;
 `;
 
 export const ResumeContainer = styled(Container)`

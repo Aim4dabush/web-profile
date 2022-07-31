@@ -21,6 +21,10 @@ export const ProjectCard = styled(Card)`
     font-size: 25px;
   }
 
+  .project-click {
+    text-align: center;
+  }
+
   .project-image {
     height: 350px;
     width: 550px;
@@ -35,5 +39,9 @@ export const ProjectCard = styled(Card)`
 
   .project-link:hover {
     color: ${red};
+  }
+
+  .project-title {
+    text-align: center;
   }
 `;
