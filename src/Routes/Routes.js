@@ -10,17 +10,21 @@ import Projects from "../Pages/Projects/Projects";
 import ProjectDetails from "../Components/Projects/ProjectDetails/ProjectDetails";
 import Resume from "../Pages/Resume/Resume";
 
-export default (
-  <Routes>
-    <Route path="/" element={<App />}>
-      <Route index element={<Home />} />
-      <Route element={<Home />} path="web-profile" />
-      <Route element={<About />} path="about" />
-      <Route element={<Projects />} exact path="projects">
-        <Route element={<ProjectDetails />} path=":projectId" />
+const RoutePath = () => {
+  return (
+    <Routes>
+      <Route path="/" element={<App />}>
+        <Route index element={<Home />} />
+        <Route element={<Home />} path="web-profile" />
+        <Route element={<About />} path="about" />
+        <Route element={<Projects />} exact path="projects">
+          <Route element={<ProjectDetails />} path=":projectId" />
+        </Route>
+        <Route element={<Resume />} path="resume" />
+        <Route element={<Contact />} path="contact" />
       </Route>
-      <Route element={<Resume />} path="resume" />
-      <Route element={<Contact />} path="contact" />
-    </Route>
-  </Routes>
-);
+    </Routes>
+  );
+};
+
+export default RoutePath;
