@@ -14,7 +14,7 @@ function Resume() {
       <Iframe
         allowFullScreen="true"
         className="pdf"
-        src={process.env.PUBLIC_URL + "/Resume.pdf"}
+        src={process.env.PUBLIC_URL + "/tech_resume.pdf"}
       />
     </ResumeContainer>
   );
